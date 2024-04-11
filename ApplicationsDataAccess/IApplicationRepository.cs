@@ -10,6 +10,7 @@ namespace ApplicationsDataAccess
 {
     public interface IApplicationsRepository
     {
-        Task<IEnumerable<VCompanyRole>> GetRoles(Expression<Func<VCompanyRole, bool>> func);
+        Task<IEnumerable<VCompanyRole>> GetRolesAsync(Expression<Func<VCompanyRole, bool>> func);
+        Task SaveOrUpdateApplicationEntryAsync(AddOrUpdateEntryModel entry);
     }
 }
